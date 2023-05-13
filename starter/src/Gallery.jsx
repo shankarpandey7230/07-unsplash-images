@@ -1,13 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useGlobalContext } from "./context";
 
 const url =
-  "https://api.unsplash.com/search/photos?client_id=7J-v3FjJ5PlVWeD9-z5zNQpZ4UsS4I4oEaVt96kb6Z4&query=office";
+  "https://api.unsplash.com/search/photos?client_id=7J-v3FjJ5PlVWeD9-z5zNQpZ4UsS4I4oEaVt96kb6Z4";
 const Gallery = () => {
+  const { searchTerm } = useGlobalContext();
   const response = useQuery({
-    queryKey: ["images"],
+    queryKey: ["images", searchTerm],
     queryFn: async () => {
-      const result = await axios.get(url);
+      const result = await axios.get(`${url}&query=${searchTerm}`);
 
       return result.data;
     },
