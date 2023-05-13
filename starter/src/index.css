@@ -271,3 +271,26 @@ ul {
   margin: 0 auto;
   margin-top: 1rem;
 }
+/* ====PROJECT CSS ====*/
+/* ===TOGGLE CONTAINER ===*/
+.toggle-container {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+}
+.dark-toggle {
+  background: transparent;
+  border-color: transparent;
+  width: 5rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.toggle-icon {
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
