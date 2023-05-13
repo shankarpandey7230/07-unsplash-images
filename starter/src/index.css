@@ -312,3 +312,29 @@ ul {
   font-size: 1.5rem;
   color: var(--textColor);
 }
+/* ===SEARCH FORM ====*/
+.title {
+  color: var(--primary-500);
+}
+.search-form {
+  width: var(--view-width);
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.search-input {
+  border-color: var(--grey-300);
+  transition: var(--darkModeTransition);
+  color: var(--textColor);
+  border-radius: 0;
+}
+
+.search-form .btn {
+  border-radius: 0;
+}
+.search-form .btn:hover {
+  background: var(--primary-300);
+  color: var(--black);
+}
